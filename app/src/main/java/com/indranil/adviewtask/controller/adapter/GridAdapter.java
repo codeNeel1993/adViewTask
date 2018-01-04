@@ -7,13 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.indranil.adviewtask.R;
 import com.indranil.adviewtask.model.pojo.GridResultModel;
-import com.indranil.adviewtask.view.activity.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +28,7 @@ public class GridAdapter extends RecyclerView.Adapter {
     List<GridResultModel> resultModelList = new ArrayList<>();
     Context context;
 
-    public GridAdapter(MainActivity mainActivity, List<GridResultModel> resultModelList) {
+    public GridAdapter(Context mainActivity, List<GridResultModel> resultModelList) {
       this.resultModelList = resultModelList;
       context = mainActivity;
     }
@@ -45,6 +43,7 @@ public class GridAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         final GridAdapter.ViewHolder viewHolder1 = (ViewHolder) viewHolder;
+
         viewHolder1.rating.setText(resultModelList.get(position).getCompRating());
         viewHolder1.name.setText(resultModelList.get(position).getName());
         viewHolder1.address.setText(resultModelList.get(position).getArea());
@@ -78,9 +77,13 @@ public class GridAdapter extends RecyclerView.Adapter {
         @BindView(R.id.openClose)TextView openClose;
         @BindView(R.id.thumbnail)ImageView background;
 
+
         public ViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
+            ButterKnife.bind(this, itemView);
+
+
         }
+
     }
 }

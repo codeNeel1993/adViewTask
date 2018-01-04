@@ -34,10 +34,11 @@ public class ListsAdapter extends RecyclerView.Adapter implements ResponseProgre
 
     List<List<String>> headerList = new ArrayList<>();
     Context context;
-    List<GridResultModel> gridResultModelList = new ArrayList<>();
+    List<GridResultModel> gridResultModelList ;
+    GridAdapter gridAdapter ;
 
-    public ListsAdapter(MainActivity mainActivity, List<List<String>> datasModels) {
-        context = mainActivity;
+    public ListsAdapter(Context context, List<List<String>> datasModels) {
+        this.context = context;
         headerList = datasModels;
     }
 
@@ -87,15 +88,12 @@ public class ListsAdapter extends RecyclerView.Adapter implements ResponseProgre
             int value = (int) response;
             switch (value) {
                 case 2:
-                    getGridList(gridResultModelList);
-                    context.startActivity(new Intent(context,MainActivity.class));
+
                     break;
 
             }
         }
     }
-
-
 
     @Override
     public void onResponseFailed(FailureCodes code) {
@@ -104,7 +102,10 @@ public class ListsAdapter extends RecyclerView.Adapter implements ResponseProgre
 
     @Override
     public void getGridList(List<GridResultModel> list) {
-        gridResultModelList = list;
+        gridResultModelList = new ArrayList<>();
+        gridResultModelList.addAll(list);
+        gridAdapter = new GridAdapter(context,gridResultModelList);
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
