@@ -3,40 +3,51 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="5dp"
-    android:layout_marginRight="5dp">
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp">
 
     <RelativeLayout
         android:id="@+id/itemGrid"
         android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="#1d7b40"
-            android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/frame">
+
+            <ImageView
+                android:id="@+id/thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_alignParentTop="true" />
 
             <TextView
                 android:id="@+id/rating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_marginRight="3dp"
-                android:text="4.5"
-                android:textColor="@android:color/white"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_gravity="end"
+                android:background="#388E3C"
+                android:text=" 4.5"
+                android:textColor="#FFFFFF"
                 android:textSize="16sp" />
 
-        </LinearLayout>
+        </FrameLayout>
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:backgroundTintMode="screen"
+            android:layout_below="@+id/frame"
+            android:layout_marginTop="15dp"
             android:orientation="vertical">
 
             <TextView
@@ -44,8 +55,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Brew House"
+                android:singleLine="true"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/address"
@@ -54,14 +66,14 @@
                 android:text="Koramangla"
                 android:textAllCaps="true"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="14sp" />
+                android:textSize="10sp" />
 
             <TextView
                 android:id="@+id/type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="South Indian"
-                android:textSize="12sp" />
+                android:textSize="8sp" />
 
             <TextView
                 android:id="@+id/openClose"
@@ -69,7 +81,7 @@
                 android:layout_height="wrap_content"
                 android:text="Open Now"
                 android:textColor="@android:color/holo_blue_light"
-                android:textSize="14sp" />
+                android:textSize="10sp" />
 
         </LinearLayout>
 

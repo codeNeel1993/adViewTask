@@ -30,7 +30,8 @@ public class GridResponseModel {
     private String nationalCatid;
     private String medianLatitude;
     private String medianLongitude;
-   /* private String vpfs;
+    private ErrorModel error;
+  /*  private String vpfs;
     private String msgpos;
     private String areadocids;
     private String areaDocidsCnt;
@@ -43,7 +44,15 @@ public class GridResponseModel {
     private Integer numberMask;
     private String moviesnf;
     private Integer other;
-    private Error error;*/
+    */
+
+    public ErrorModel getError() {
+        return error;
+    }
+
+    public void setError(ErrorModel error) {
+        this.error = error;
+    }
 
     public List<GridResultModel> getResults() {
         return results;

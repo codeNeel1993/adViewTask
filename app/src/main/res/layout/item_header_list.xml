@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
         android:id="@+id/mainLayout"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
 
         <TextView
+            android:id="@+id/headerText"
             android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:text="HeaderITems"
-            android:textSize="16dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
             android:gravity="center"
-            android:id="@+id/headerText"/>
+            android:text="HeaderITems"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/headerText"
+            android:gravity="center|bottom"
+            android:text="."
+            android:textSize="26dp" />
 
     </RelativeLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/mainLayout"
-        android:text="."
-        android:id="@+id/dot"
-        android:gravity="center|bottom"
-        android:textSize="26dp"/>
 
 
-</RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -23,7 +23,6 @@ public class GridResultModel {
     private String priceRange;
     private Integer closeddownFlag;
     private String mappointer;
-//    private An an;
     private String priceTagD;
     private String exprience;
     private String typeOfHotel;
@@ -32,7 +31,6 @@ public class GridResultModel {
     private String extraPaymentMode;
     private String deliveryTime;
     private String discountP;
-//    private AttrData attrData;
     private String ishotel;
     private String iscab;
     private String opstring;
@@ -41,6 +39,23 @@ public class GridResultModel {
     private String node1;
     private String node2;
     private String type;
+    private String vNumber;
+    private String totalReviews;
+    private String guarantee;
+    private String show;
+    private String video;
+    private String city;
+    private String pqt;
+    private String pqtr;
+    private Integer shopfront;
+    private String thumbnail;
+    private Integer islogo;
+    private String totJdReviews;
+    private Integer catalogCount;
+    private String minimumOrder;
+    private Integer cancall;
+    private String positionFlag;
+    private String addVen;
     private Integer favflag;
 
     public String getDocId() {
@@ -305,6 +320,142 @@ public class GridResultModel {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getvNumber() {
+        return vNumber;
+    }
+
+    public void setvNumber(String vNumber) {
+        this.vNumber = vNumber;
+    }
+
+    public String getTotalReviews() {
+        return totalReviews;
+    }
+
+    public void setTotalReviews(String totalReviews) {
+        this.totalReviews = totalReviews;
+    }
+
+    public String getGuarantee() {
+        return guarantee;
+    }
+
+    public void setGuarantee(String guarantee) {
+        this.guarantee = guarantee;
+    }
+
+    public String getShow() {
+        return show;
+    }
+
+    public void setShow(String show) {
+        this.show = show;
+    }
+
+    public String getVideo() {
+        return video;
+    }
+
+    public void setVideo(String video) {
+        this.video = video;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPqt() {
+        return pqt;
+    }
+
+    public void setPqt(String pqt) {
+        this.pqt = pqt;
+    }
+
+    public String getPqtr() {
+        return pqtr;
+    }
+
+    public void setPqtr(String pqtr) {
+        this.pqtr = pqtr;
+    }
+
+    public Integer getShopfront() {
+        return shopfront;
+    }
+
+    public void setShopfront(Integer shopfront) {
+        this.shopfront = shopfront;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
+
+    public Integer getIslogo() {
+        return islogo;
+    }
+
+    public void setIslogo(Integer islogo) {
+        this.islogo = islogo;
+    }
+
+    public String getTotJdReviews() {
+        return totJdReviews;
+    }
+
+    public void setTotJdReviews(String totJdReviews) {
+        this.totJdReviews = totJdReviews;
+    }
+
+    public Integer getCatalogCount() {
+        return catalogCount;
+    }
+
+    public void setCatalogCount(Integer catalogCount) {
+        this.catalogCount = catalogCount;
+    }
+
+    public String getMinimumOrder() {
+        return minimumOrder;
+    }
+
+    public void setMinimumOrder(String minimumOrder) {
+        this.minimumOrder = minimumOrder;
+    }
+
+    public Integer getCancall() {
+        return cancall;
+    }
+
+    public void setCancall(Integer cancall) {
+        this.cancall = cancall;
+    }
+
+    public String getPositionFlag() {
+        return positionFlag;
+    }
+
+    public void setPositionFlag(String positionFlag) {
+        this.positionFlag = positionFlag;
+    }
+
+    public String getAddVen() {
+        return addVen;
+    }
+
+    public void setAddVen(String addVen) {
+        this.addVen = addVen;
     }
 
     public Integer getFavflag() {

@@ -7,23 +7,23 @@
     tools:context="com.indranil.adviewtask.view.activity.MainActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewList"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:scrollbars="horizontal"
-        tools:listitem="@layout/item_header_list"
-        android:id="@+id/recyclerViewList">
+        tools:listitem="@layout/item_header_list">
 
     </android.support.v7.widget.RecyclerView>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerViewGrid"
-        app:layoutManager="GridLayoutManager"
-        android:scrollbars="vertical"
-        tools:listitem="@layout/item_grid_list"
         android:layout_below="@+id/recyclerViewList"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="5dp"
+        android:scrollbars="vertical"
+        app:layoutManager="GridLayoutManager"
+        tools:listitem="@layout/item_grid_list">
 
     </android.support.v7.widget.RecyclerView>
 
