@@ -54,21 +54,12 @@ public class MainActivity extends AppCompatActivity implements ResponseProgressL
             ApiManager.getListDetails(this,this,this);
         }
 
-
-
         mGridLayoutManager = new GridLayoutManager(this,2);
         gridRecyclerView.setLayoutManager(mGridLayoutManager);
 
         if(gridAdapter == null){
             ApiManager.getGridDetails(this,url,this,this);
-        }else {
-            gridAdapter = new GridAdapter(this, resultModelList);
-            gridAdapter.notifyDataSetChanged();
-            gridRecyclerView.setAdapter(gridAdapter);
         }
-
-
-
     }
 
     @Override

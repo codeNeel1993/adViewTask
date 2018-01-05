@@ -43,7 +43,7 @@ public class GridAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
         final GridAdapter.ViewHolder viewHolder1 = (ViewHolder) viewHolder;
-
+        viewHolder1.setIsRecyclable(true);
         viewHolder1.rating.setText(resultModelList.get(position).getCompRating());
         viewHolder1.name.setText(resultModelList.get(position).getName());
         viewHolder1.address.setText(resultModelList.get(position).getArea());
@@ -59,9 +59,8 @@ public class GridAdapter extends RecyclerView.Adapter {
         }
 
 
+
     }
-
-
 
     @Override
     public int getItemCount() {

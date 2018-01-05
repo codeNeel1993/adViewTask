@@ -5,6 +5,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,8 @@ import com.indranil.adviewtask.model.listners.GridListner;
 import com.indranil.adviewtask.model.listners.ResponseProgressListner;
 import com.indranil.adviewtask.model.pojo.GridResultModel;
 import com.indranil.adviewtask.view.activity.MainActivity;
+import com.indranil.adviewtask.view.utils.GridDiffCallback;
+
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.BindView;
@@ -88,11 +91,20 @@ public class ListsAdapter extends RecyclerView.Adapter implements ResponseProgre
             int value = (int) response;
             switch (value) {
                 case 2:
-
+//                    updateGrid(gridResultModelList);
                     break;
 
             }
         }
+    }
+
+    public void updateGrid(List<GridResultModel> gridResultModelList) {
+        final GridDiffCallback diffCallback = new GridDiffCallback(this.gridResultModelList, gridResultModelList);
+        final DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(diffCallback);
+
+        this.gridResultModelList.clear();
+        this.gridResultModelList.addAll(gridResultModelList);
+        diffResult.dispatchUpdatesTo(gridAdapter);
     }
 
     @Override
@@ -102,10 +114,7 @@ public class ListsAdapter extends RecyclerView.Adapter implements ResponseProgre
 
     @Override
     public void getGridList(List<GridResultModel> list) {
-        gridResultModelList = new ArrayList<>();
-        gridResultModelList.addAll(list);
-        gridAdapter = new GridAdapter(context,gridResultModelList);
-
+        gridAdapter = new GridAdapter(context,list);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -116,6 +125,7 @@ public class ListsAdapter extends RecyclerView.Adapter implements ResponseProgre
         public ViewHolder(View view) {
             super(view);
             ButterKnife.bind(this, view);
+
         }
     }
 
